@@ -1,0 +1,49 @@
+{
+  "app": "짤·카드 스튜디오",
+  "version": 2,
+  "exportedAt": "2026-10-29T05:30:47.607Z",
+  "templates": [
+    {
+      "id": "c24c0f5d-116b-4292-b837-9e76fe9f0403",
+      "name": "동기부여 카드 - 일출",
+      "settings": {
+        "width": 1080,
+        "height": 1080,
+        "bgColor": "#f6d365",
+        "headline": "오늘도 해냈다!",
+        "subtext": "작은 걸음도 전진이다.",
+        "fontFamily": "system-ui",
+        "textAlign": "center",
+        "headlineSize": 76,
+        "subSize": 32,
+        "textColor": "#ffffff",
+        "strokeColor": "#222222",
+        "overlay": 20,
+        "textPosition": "center",
+        "strokeWidth": 3
+      },
+      "savedAt": "2026-10-29T03:42:27.821Z"
+    },
+    {
+      "id": "c24c0f5d-116b-4292-b837-9e76fe9f0403",
+      "name": "동기부여 카드 - 일출",
+      "settings": {
+        "width": 1080,
+        "height": 1080,
+        "bgColor": "#f6d365",
+        "headline": "오늘도 해냈다!",
+        "subtext": "작은 걸음도 전진이다.",
+        "fontFamily": "system-ui",
+        "textAlign": "center",
+        "headlineSize": 76,
+        "subSize": 32,
+        "textColor": "#ffffff",
+        "strokeColor": "#222222",
+        "overlay": 20,
+        "textPosition": "center",
+        "strokeWidth": 3
+      },
+      "savedAt": "2026-10-29T03:42:27.821Z"
+    }
+  ]
+}
