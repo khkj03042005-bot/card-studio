@@ -104,6 +104,7 @@ canvas{display:block;max-width:100%;max-height:72vh;width:auto;height:auto;box-s
     </div>
   </section>
 </main>
+<script src="lib/merge.js"></script>
 <script>
 (() => {
   'use strict';
@@ -244,7 +245,7 @@ canvas{display:block;max-width:100%;max-height:72vh;width:auto;height:auto;box-s
     const r=new FileReader();r.onload=()=>{try{
       const data=JSON.parse(r.result);if(!data||!Array.isArray(data.templates)||data.templates.length>200)throw Error('형식이 올바르지 않습니다.');
       const clean=data.templates.map((t,i)=>{if(!t||typeof t.name!=='string'||!t.settings||typeof t.settings!=='object')throw Error(`템플릿 ${i+1}의 형식이 올바르지 않습니다.`);return{id:String(t.id||`${Date.now()}-${i}`),name:t.name.slice(0,60),settings:validateImportedSettings(t.settings),savedAt:String(t.savedAt||'')};});
-      const merged=[...getTemplates(),...clean];if(merged.length>300)throw Error('템플릿은 최대 300개까지 저장할 수 있습니다.');setTemplates(merged);setStatus(`${clean.length}개 템플릿을 복원했습니다.`);
+      const result=window.CardMerge.mergeTemplates(getTemplates(),clean);setTemplates(result.merged);setStatus(`JSON 복원 완료: 추가 ${result.added}개 · 건너뜀 ${result.skipped}개 · 새 ID로 보존 ${result.renamed}개`);
     }catch(err){setStatus(`JSON 복원 실패: ${err.message||'파일을 확인하세요.'}`,true);}e.target.value='';};r.readAsText(f);
   });
   function validateImportedSettings(s){
